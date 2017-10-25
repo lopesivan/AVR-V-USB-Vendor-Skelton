@@ -1,3 +1,31 @@
+AVR V-USB custom skelton project
+================================
+
+
+Faça um dispositivo USB personalizado com AVR + V - USB Skeleton V - USB responde pedidos padrão e pode ser escrito de forma bastante concisa.
+
+Exemplo de implementação do host para conexão a este dispositivo
+
+./sketch.rb libusb + ruby
+./sketch-chrome-app/ Chrome App
+Exemplo de circuito (Eagle)
+
+./circuit/
+ Antecedentes
+
+Mac: Uma vez que o sistema operacional possui acesso de baixo nível ao dispositivo HID, criar um dispositivo como uma classe HID é bastante incômodo (embora o controle_transfer seja possível, mas claim_interface é impossível, você não pode fazer mais nada) ).
+
+ Memorando
+
+USB_CFG_DEVICE_CLASS para 0xff (fornecedor)
+USB_CFG_INTERFACE_CLASS para 0xff (fornecedor)
+Se você não fizer isso (claim_interface falha)
+
+ref.
+
+http://vusb.wikidot.com/driver-api
+http://vusb.wikidot.com/host-software
+
 AVR V-USB custom class skelton project
 ======================================
 
